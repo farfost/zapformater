@@ -24,8 +24,6 @@ for item in file_read[0]['Vulnerabilities']:
         "PkgName": item['PkgName'],
         "InstalledVersion": item['InstalledVersion'],
         "PrimaryURL": item['PrimaryURL'],
-        "Description": item['Description'],
-        "Severity": item['Severity'],
         "messageId": _id,  # ??????????
         "id": _id,
     }
@@ -36,6 +34,8 @@ for item in file_read[0]['Vulnerabilities']:
         body.update({"PublishedDate": item['PublishedDate']})
     if 'LastModifiedDate' in item:
         body.update({"LastModifiedDate": item['LastModifiedDate']})
+    if 'Description' in item:
+        body.update({"Description": item['Description']})
 
     f_new.write(json.dumps(body) + '\n')
     _id += 1
