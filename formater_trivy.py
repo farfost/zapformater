@@ -24,6 +24,7 @@ for item in file_read[0]['Vulnerabilities']:
         "PkgName": item['PkgName'],
         "InstalledVersion": item['InstalledVersion'],
         "PrimaryURL": item['PrimaryURL'],
+        "Severity": item['Severity'],
         "messageId": _id,  # ??????????
         "id": _id,
     }
