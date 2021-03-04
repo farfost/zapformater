@@ -8,10 +8,10 @@ docker run --net=zapnet --name=webgoat -p 60999:8080 -t -d webgoat/webgoat-8.0
 
 
 scaners\
-docker run --net=zapnet -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable:latest zap-full-scan.py  -t https://term.XXX.ru/ -a -m 5 -s -J XXX.json
+docker run --net=zapnet -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable:latest zap-full-scan.py  -t https://XXX.ru/ -a -m 5 -s -J XXX.json
 
 
-trivy  -d image -f json  -o zap.json  owasp/zap2docker-stable
+trivy  -d image -f json  -o XXX.json  owasp/zap2docker-stable
 
 
 formaters\
