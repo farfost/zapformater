@@ -4,8 +4,8 @@ import sys
 params = {}
 # -input scan_s.json
 # -output scan_s_ready.json
-# -index (mesto)_(sreda)_(scanproject)_zapscan
-# -type date
+# -index (mesto)_(sreda)_zapcan_(scansystem)_date
+# -type (scansystem)
 
 if __name__ == "__main__":
     params.update({sys.argv[1]: sys.argv[2]})
