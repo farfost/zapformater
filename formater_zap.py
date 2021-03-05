@@ -4,7 +4,7 @@ import sys
 params = {}
 # -input scan_s.json
 # -output scan_s_ready.json
-# -index (mesto)_(sreda)_zapscan_(scanproject)
+# -index (mesto)_(sreda)_(scanproject)_zapscan
 # -type date
 
 if __name__ == "__main__":
