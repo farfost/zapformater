@@ -1,5 +1,5 @@
 
-python3 formater_XXX.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scanimage)_(scaner)scan -type date
+python3 formater_XXX.py -input XXX.json -output XXX_ready.json -index dso_(sreda)_(scanimage)_(scaner)scan -type date
 
 
 webgoat\
