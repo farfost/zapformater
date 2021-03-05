@@ -4,7 +4,7 @@ import sys
 params = {}
 # -input xxx.json
 # -output xxx_ready.json
-# -index (mesto)_(sreda)_trivyscan_(scanimage)
+# -index (mesto)_(sreda)_(scanimage)_trivyscan
 # -type date
 
 if __name__ == "__main__":
