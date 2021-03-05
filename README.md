@@ -1,5 +1,5 @@
 
-python3 formater_XXX.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scaner)scan_(scanimage) -type date
+python3 formater_XXX.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scanimage)_(scaner)scan -type date
 
 
 webgoat\
@@ -15,9 +15,9 @@ trivy  -d image -f json  -o XXX.json  owasp/zap2docker-stable
 
 
 formaters\
-python3 formater_zap.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_zapscan_(scanimage) -type date
+python3 formater_zap.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scanimage)_zapscan -type date
 
-python3 formater_trivy.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_trivyscan_(scanimage) -type date
+python3 formater_trivy.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scanimage)_trivyscan -type date
 
 
 
