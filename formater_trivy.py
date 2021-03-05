@@ -4,8 +4,9 @@ import sys
 params = {}
 # -input xxx.json
 # -output xxx_ready.json
-# -index index_for_elk
-# -type _type_of_scaner
+# -index (mesto)_(sreda)trivyscan_(scanimage)
+# -type date
+
 if __name__ == "__main__":
     params.update({sys.argv[1]: sys.argv[2]})
     params.update({sys.argv[3]: sys.argv[4]})
