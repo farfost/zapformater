@@ -13,6 +13,8 @@ docker run --net=zapnet -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable:latest
 
 trivy  -d image -f json  -o XXX.json  owasp/zap2docker-stable
 
+docker run -v $(pwd):/result/ aquasec/trivy -d -f json -o /result/results1.json bkimminich/juice-shop
+
 
 formaters\
 
