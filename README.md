@@ -1,5 +1,5 @@
 
-python3 formater_XXX.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scanimage)_(scaner)scan -type date
+python3 formater_XXX.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scaner) -type (scanimage) -date (date)
 
 
 webgoat\
@@ -18,9 +18,9 @@ docker run -v $(pwd):/result/ aquasec/trivy -d -f json -o /result/results1.json 
 
 formaters\
 
-python3 formater_zap.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_zapcan_(scansystem)_date -type (scansystem)
+python3 formater_zap.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scaner) -type (scanimage) -date (date)
 
-python3 formater_trivy.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_zapcan_(scanimage)_date -type (scanimage)
+python3 formater_trivy.py -input XXX.json -output XXX_ready.json -index (mesto)_(sreda)_(scaner) -type (scanimage) -date (date)
 
 
 
