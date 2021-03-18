@@ -1,12 +1,15 @@
 import json
 import sys
+import datetime
+
+now = datetime.datetime.now()
 
 params = {}
 # -input xxx.json
 # -output xxx_ready.json
-# -index (mesto)_(sreda)zapcan                      /delete(scanimage)_date
+# -index (mesto)_(sreda)_trivyscan                     
 # -type (scanimage)
-# -date (date)
+
 
 if __name__ == "__main__":
     params.update({sys.argv[1]: sys.argv[2]})
@@ -29,6 +32,7 @@ for item in file_read[0]['Vulnerabilities']:
         "Severity": item['Severity'],
         "messageId": _id,  # ??????????
         "id": _id,
+        "date": now.strftime("%d.%m.%Y"),
     }
 
     if 'Title' in item:
@@ -44,4 +48,4 @@ for item in file_read[0]['Vulnerabilities']:
     _id += 1
 f_new.close()
 
-print('format succes')
+print('format success')
