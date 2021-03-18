@@ -1,12 +1,15 @@
 import json
 import sys
+import datetime
+
+now = datetime.datetime.now()
 
 params = {}
 # -input xxx.json
 # -output xxx_ready.json
-# -index (mesto)_(sreda)zapcan                      /delete(scansystem)_date
+# -index (mesto)_(sreda)_zapcan                     
 # -type (scanimage)
-# -date (date)
+
 
 if __name__ == "__main__":
     params.update({sys.argv[1]: sys.argv[2]})
@@ -38,6 +41,7 @@ for item in file_read['site']:
                 "risk": item_2['riskcode'],
                 "alertRef": item_2['alertRef'],
                 "id": _id,
+                "date": now.strftime("%d.%m.%Y"),
             }
             if 'cweid' in item_2:
                 body.update({"cweid": item_2['cweid']})
@@ -56,4 +60,4 @@ for item in file_read['site']:
             _id += 1
 f_new.close()
 
-print('format succes')
+print('format success')
