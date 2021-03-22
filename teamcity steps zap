@@ -7,7 +7,7 @@ git clone https://github.com/farfost/zapformater.git
 cp %Name%.json zapformater
 cd zapformater
 ls -la
-python3 formater_zap.py -input %Name%.json -output %Name%_elk.json -index dsoscan_%sreda%_zapscan_%Name%_%Date% -type %Name%
+python3 formater_zap.py -input %Name%.json -output %Name%_elk.json -index dsoscan_%sreda%_zapscan -type %Name%
 until curl -u elastic:changeme localhost:9200; do echo "Waiting for Elastic Search"; sleep 2; done
 curl -H 'Content-Type: application/json' -u elastic:changeme  -XPOST localhost:9200/_bulk?pretty --data-binary @%Name%_elk.json
 ls -la
